@@ -1,6 +1,6 @@
 export default  {
-  training: 10,
-  rest: 3,
-  long_rest: 12,
+  training: 60,
+  rest: 30,
+  long_rest: 120,
   start_time: 5
 }

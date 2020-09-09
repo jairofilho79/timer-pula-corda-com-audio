@@ -4,27 +4,33 @@ import audioSRCConstants from './Audio/audioSRCConstants.js'
 
 const player = document.getElementById('player');
 
-emitter.on(timerConstants.start_training, () => {
+function startTraining() {
   player.src = audioSRCConstants.start_training;
   player.play();
-})
+}
 
-emitter.on(timerConstants.last_five_seconds, () => {
+function lastFiveSeconds() {
   player.src = audioSRCConstants.last_five_seconds;
   player.play();
-})
+}
 
-emitter.on(timerConstants.end_training, () => {
+function endTraining() {
   player.src = audioSRCConstants.end_training;
   player.play();
-})
+}
 
-emitter.on(timerConstants.rest, () => {
+function rest() {
   player.src = audioSRCConstants.rest;
   player.play();
-})
+}
 
-emitter.on(timerConstants.long_rest, () => {
+function longRest(){
   player.src = audioSRCConstants.long_rest;
   player.play();
-})
+}
+
+emitter.on(timerConstants.start_training, startTraining);
+emitter.on(timerConstants.last_five_seconds, lastFiveSeconds);
+emitter.on(timerConstants.end_training, endTraining);
+emitter.on(timerConstants.rest, rest);
+emitter.on(timerConstants.long_rest, longRest);
